@@ -26,9 +26,9 @@ ClozeCard.prototype.partial = function() {
 			}
 		}
 	}
-	
+
 	finalText = fulltextArray.join(" ");
-	cleanText = finalText.replace("... ...", "...")
+	cleanText = finalText.replace("... ...", "...");
 
 	return (cleanText);
 	
