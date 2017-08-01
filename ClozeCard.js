@@ -11,6 +11,7 @@ ClozeCard.prototype.partial = function() {
 
 	var lowText = this.fullText.toLowerCase();
 	var lowCloze = this.cloze.toLowerCase();
+<<<<<<< HEAD
 	var fulltextArray = this.fullText.split(" ");
 	var lowtextArray = lowText.split(" ");
 	var lowclozeArray = lowCloze.split(" ");
@@ -25,6 +26,14 @@ ClozeCard.prototype.partial = function() {
 				return (lowclozeArray[j] + " doesn't appear in " + this.fullText);
 			}
 		}
+=======
+	var textSwap = this.fullText.replace(this.cloze, "...");
+	
+	if (!lowText.includes(lowCloze)) {
+		return (this.cloze + " doesn't appear in " + this.fullText);
+	} else {
+		return (textSwap);
+>>>>>>> 7216034ae185ffd82a1d3a30b2f08de1ff6d2baf
 	}
 	
 	finalText = fulltextArray.join(" ");
