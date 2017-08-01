@@ -12,10 +12,7 @@ ClozeCard.prototype.partial = function() {
 	var lowText = this.fullText.toLowerCase();
 	var lowCloze = this.cloze.toLowerCase();
 	var textSwap = this.fullText.replace(this.cloze, "...");
-	console.log(lowText);
-	console.log(lowCloze);
-	console.log(textSwap);
-
+	
 	if (!lowText.includes(lowCloze)) {
 		return (this.cloze + " doesn't appear in " + this.fullText);
 	} else {
